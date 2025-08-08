@@ -4,7 +4,12 @@ body {
   }
   
   #sobre img {
-    border: 4px solid #007bff;
+    border: 4px solid transparent;
+  border-radius: 8px; /* opcional */
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(139deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   }
   
   .card:hover {
@@ -21,3 +26,65 @@ body {
     height: 100px;
     border-radius: 32px;
   }
+
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;            /* centraliza se o UL tiver largura definida ou com flex */
+    display: flex;             /* deixa os itens na horizontal */
+    justify-content: center;   /* centraliza os itens no eixo horizontal */
+    gap: 16px;  
+    width: 100%;               /* espaço entre os itens */
+  }
+  
+  ul li {
+    display: inline;
+  }
+  
+
+  
+
+  .ico{
+    height: 100px;
+    width: 100px;
+    background-size: cover; /* ajusta a imagem para preencher o container */
+    background-position: center;
+    transition: background-image 0.3s ease;
+  }
+
+  #html {
+    background-image: url("../IMG/html.png");
+  }
+  
+  #html:hover {
+    background-image: url("../IMG/html(1).png");
+  }
+  
+  #js {
+    background-image: url("../IMG/js.png");
+  }
+  
+  #js:hover {
+    background-image: url("../IMG/js(1).png");
+  }
+
+  #PHP{
+    background-image: url("../IMG/php.png");
+  }
+
+  #PHP:hover{
+    background-image: url("../IMG/php\(1\).png");
+
+  }
+
+  #Java{
+    background-image: url("../IMG/java.png");
+  }
+
+  #Java:hover{
+    background-image: url("../IMG/java\(1\).png");
+
+  }
+
+  
