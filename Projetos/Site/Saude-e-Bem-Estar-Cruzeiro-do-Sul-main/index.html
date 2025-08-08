@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Saudável - Cruzeiro do Sul</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2A5C82;
+      --secondary-color: #5CB85C;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #3A86FF 100%);
+      color: white;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+
+    .card-hover {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .meal-time-card {
+      border-left: 4px solid var(--secondary-color);
+      transition: all 0.3s;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-heartbeat"></i> Vida Saudável
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#exercicios">Exercícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#alimentacao">Nutrição</a></li>
+          <li class="nav-item"><a class="nav-link" href="#imc">Calculadora IMC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dicas">Dicas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção Hero -->
+  <section id="home" class="hero-section">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-4">Sua Jornada Saudável Começa Aqui</h1>
+      <p class="lead mb-4">Guia completo para estudantes alcançarem o equilíbrio físico e mental</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="#exercicios" class="btn btn-light btn-lg">Começar Agora</a>
+        <a href="#dicas" class="btn btn-outline-light btn-lg">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exercícios -->
+  <section id="exercicios" class="py-5"><br><br>
+    <div class="container">
+      <h2 class="text-center mb-5">Rotina de Exercícios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 card-hover"><a href="exercicios/yoga.html">
+            <div class="card-body">
+              <div class="icon-box">
+                <i class="fas fa-spa text-white fs-4"></i>
+              </div>
+              <h3 class="h5">Yoga Matinal</h3>
+              <p>Sessões de 15 minutos para começar o dia com energia e foco</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Melhora a postura</li>
+                <li><i class="fas fa-check text-success me-2"></i>Reduz o estresse</li>
+              </ul>
+            </div>
+          </div></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 card-hover"><a href="exercicios/corrida.html">
+            <div class="card-body">
+              <div class="icon-box">
+                <i class="fas fa-running text-white fs-4"></i>
+              </div>
+              <h3 class="h5">Corrida Leve</h3>
+              <p>20 minutos de corrida leve ao redor do campus ou no bairro</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Melhora cardiovascular</li>
+                <li><i class="fas fa-check text-success me-2"></i>Queima calórica eficiente</li>
+              </ul>
+            </div>
+          </div></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 card-hover"><a href="exercicios/alongamento.html">
+            <div class="card-body">
+              <div class="icon-box">
+                <i class="fas fa-dumbbell text-white fs-4"></i>
+              </div>
+              <h3 class="h5">Alongamento Diário</h3>
+              <p>Exercícios simples para manter a flexibilidade e prevenir lesões</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Alivia tensões musculares</li>
+                <li><i class="fas fa-check text-success me-2"></i>Melhora a circulação</li>
+              </ul>
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </div><br><br>
+  </section>
+
+  <!-- Nutrição -->
+  <section id="alimentacao" class="py-5 bg-light"><br><br>
+    <div class="container">
+      <h2 class="text-center mb-5">Plano Nutricional</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3"><a href="Nutri/cafe_da_manha.html">
+          <div class="card meal-time-card h-100">
+            <div class="card-body">
+              <h3><i class="fas fa-sun text-warning me-2"></i>Café da Manhã</h3>
+              <p>Opções ricas em proteínas e fibras para começar o dia</p>
+            </div>
+          </div>
+        </div></a>
+        <div class="col-md-6 col-lg-3"><a href="Nutri/almoco.html">
+          <div class="card meal-time-card h-100">
+            <div class="card-body">
+              <h3><i class="fas fa-utensils text-success me-2"></i>Almoço</h3>
+              <p>Combinações equilibradas de proteínas, vegetais e carboidratos</p>
+            </div>
+          </div>
+        </div></a>
+        <div class="col-md-6 col-lg-3"><a href="Nutri/Lanche_da_tarde.html">
+          <div class="card meal-time-card h-100">
+            <div class="card-body">
+              <h3><i class="fas fa-mug-hot text-danger me-2"></i>Lanche da Tarde</h3>
+              <p>Snacks saudáveis como castanhas, frutas e iogurtes</p>
+            </div>
+          </div>
+        </div></a>
+        <div class="col-md-6 col-lg-3"><a href="Nutri/Jantar.html">
+          <div class="card meal-time-card h-100">
+            <div class="card-body">
+              <h3><i class="fas fa-moon text-primary me-2"></i>Jantar</h3>
+              <p>Refeições leves para garantir uma boa noite de sono</p>
+            </div>
+          </div>
+        </div></a>
+      </div>
+    </div><br><br>
+  </section>
+
+  <!-- Calculadora de IMC -->
+<section id="imc" class="py-5 bg-light"><br><br>
+  <div class="container">
+    <h2 class="text-center mb-4">Calculadora de IMC</h2>
+    <p class="text-center mb-5">Descubra se seu Índice de Massa Corporal está dentro do ideal.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 shadow">
+          <div class="mb-3">
+            <label for="peso" class="form-label">Peso (kg)</label>
+            <input type="number" class="form-control" id="peso" placeholder="Ex: 70" required>
+          </div>
+          <div class="mb-3">
+            <label for="altura" class="form-label">Altura (m)</label>
+            <input type="number" step="0.01" class="form-control" id="altura" placeholder="Ex: 1.75" required>
+          </div>
+          <button onclick="calcularIMC()" class="btn btn-success w-100">Calcular IMC</button>
+          <div id="resultadoIMC" class="mt-3 text-center fw-bold"></div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+</section>
+
+
+  <!-- Dicas -->
+  <section id="dicas" class="py-5"><br><br>
+    <div class="container">
+      <h2 class="text-center mb-5">Dicas Essenciais</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col"><a href="Dicas/Saude_mental.html">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <h3>Saúde Mental 🧠</h3>
+              <p>Técnicas de mindfulness e gestão do estresse</p>
+            </div>
+          </div>
+        </div></a>
+        <div class="col"><a href="Dicas/Qualidade_de_sono.html">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <h3>Qualidade do Sono 🛌🏻</h3>
+              <p>Durma pelo menos 7 horas por noite para recuperação total do corpo</p>
+            </div>
+          </div>
+        </div></a>
+        <div class="col"><a href="Dicas/Hidratacao.html">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <h3>Hidratação 💧</h3>
+              <p>Beba 2 litros de água por dia para manter o corpo ativo e saudável</p>
+            </div>
+          </div>
+        </div></a>
+      </div>
+    </div><br><br>
+  </section>
+
+  <!-- Rodapé -->
+  <!-- Formulário de Feedback -->
+  <section id="feedback" class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Envie Seu Feedback</h2>
+      <form action="#" method="post">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="comentario" class="form-label">Comentário</label>
+          <textarea class="form-control" id="comentario" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Enviar Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <button id="scrollTop" class="scroll-top-btn btn btn-primary p-3">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.onscroll = () => {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+
+    function calcularIMC() {
+    const peso = parseFloat(document.getElementById('peso').value);
+    const altura = parseFloat(document.getElementById('altura').value);
+    const resultado = document.getElementById('resultadoIMC');
+
+    if (!peso || !altura || altura <= 0) {
+      resultado.textContent = 'Por favor, insira valores válidos.';
+      resultado.classList.add('text-danger');
+      return;
+    }
+
+    const imc = (peso / (altura * altura)).toFixed(2);
+    let classificacao = '';
+
+    if (imc < 18.5) {
+      classificacao = 'Abaixo do peso';
+    } else if (imc < 24.9) {
+      classificacao = 'Peso normal';
+    } else if (imc < 29.9) {
+      classificacao = 'Sobrepeso';
+    } else if (imc < 34.9) {
+      classificacao = 'Obesidade grau I';
+    } else if (imc < 39.9) {
+      classificacao = 'Obesidade grau II';
+    } else {
+      classificacao = 'Obesidade grau III';
+    }
+
+    resultado.textContent = `Seu IMC é ${imc} (${classificacao})`;
+    resultado.classList.remove('text-danger');
+  }
+  </script>
+</body>
+</html>

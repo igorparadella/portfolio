@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoço Saudável - Vida Saudável</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2A5C82;
+      --secondary-color: #5CB85C;
+    }
+    
+    body {
+      padding-top: 56px;
+    }
+    
+    .hero-lunch {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #3A86FF 100%);
+      color: white;
+      padding: 80px 0;
+      margin-bottom: 40px;
+    }
+    
+    .recipe-card {
+      transition: transform 0.3s;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .benefit-item {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .benefit-item i {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--secondary-color);
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .back-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    
+    .back-btn:hover {
+      background-color: #1a4561;
+      color: white;
+      transform: translateX(-5px);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-lunch {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="fas fa-heartbeat"></i> Vida Saudável
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#exercicios">Exercícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#alimentacao">Nutrição</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#imc">Calculadora IMC</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#dicas">Dicas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção Hero Almoço -->
+  <section class="hero-lunch">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-3">Almoço Saudável</h1>
+      <p class="lead">Refeições equilibradas para manter sua energia durante o dia!</p>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <a href="../index.html#alimentacao" class="back-btn mb-4">
+          <i class="fas fa-arrow-left me-2"></i> Voltar para Nutrição
+        </a>
+        
+        <h2 class="mb-4">Receitas de Almoço</h2>
+        <p class="lead">Aqui estão algumas opções saudáveis e fáceis de preparar para o seu almoço.</p>
+        
+        <div class="row mt-5">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 recipe-card">
+              <div class="card-body">
+                <h3><i class="fas fa-carrot me-2"></i>Quinoa com Legumes</h3>
+                <p><strong>Ingredientes:</strong> 1 xícara de quinoa, 1 cenoura, 1 abobrinha, 1 pimentão, azeite e temperos.</p>
+                <p><strong>Modo de Preparo:</strong> Cozinhe a quinoa e refogue os legumes. Misture tudo e sirva.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 recipe-card">
+              <div class="card-body">
+                <h3><i class="fas fa-chicken me-2"></i>Frango Grelhado com Salada</h3>
+                <p><strong>Ingredientes:</strong> 1 peito de frango, alface, tomate, cebola, azeite e limão.</p>
+                <p><strong>Modo de Preparo:</strong> Grelhe o frango e sirva com a salada temperada.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 recipe-card">
+              <div class="card-body">
+                <h3><i class="fas fa-fish me-2"></i>Peixe ao Forno com Ervas</h3>
+                <p><strong>Ingredientes:</strong> 1 filé de peixe, ervas finas, limão, sal e pimenta.</p>
+                <p><strong>Modo de Preparo:</strong> Tempere o peixe e asse no forno por 20 minutos.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 recipe-card">
+              <div class="card-body">
+                <h3><i class="fas fa-pasta me-2"></i>Pasta com Molho de Tomate</h3>
+                <p><strong>Ingredientes:</strong> 100g de massa integral, 1 lata de molho de tomate, manjericão.</p>
+                <p><strong>Modo de Preparo:</strong> Cozinhe a massa e misture com o molho aquecido.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-5">
+          <h3 class="mb-4">Dicas para um Almoço Saudável</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Inclua uma fonte de proteína em cada refeição
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Varie as cores dos legumes e verduras no prato
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Evite frituras e opte por métodos de cozimento saudáveis
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Mantenha-se hidratado, bebendo água ou chás
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Planeje suas refeições para evitar escolhas não saudáveis
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card shadow-sm p-4 mb-4">
+          <h3 class="mb-4">Benefícios de um Almoço Saudável</h3>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Fornece energia</h5>
+            <p class="text-muted">Refeições equilibradas ajudam a manter a energia ao longo do dia.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Melhora a concentração</h5>
+            <p class="text-muted">Nutrientes adequados favorecem a função cognitiva.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Contribui para a saúde</h5>
+            <p class="text-muted">Alimentos saudáveis ajudam a prevenir doenças.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Promove a saciedade</h5>
+            <p class="text-muted">Refeições ricas em fibras ajudam a controlar a fome.</p>
+          </div>
+        </div>
+        
+        <div class="card shadow-sm p-4">
+          <h3 class="mb-4">Sugestões de Bebidas</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fas fa-water text-primary me-2"></i>
+              Água com limão
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-glass-whiskey text-primary me-2"></i>
+              Suco natural de frutas
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-lemon text-primary me-2"></i>
+              Chá gelado
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-coffee text-primary me-2"></i>
+              Café ou chá
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>© 2023 Vida Saudável - Cruzeiro do Sul. Todos os direitos reservados.</p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

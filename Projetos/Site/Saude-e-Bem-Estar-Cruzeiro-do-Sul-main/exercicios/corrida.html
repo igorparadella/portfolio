@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrida Leve - Vida Saudável</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2A5C82;
+      --secondary-color: #5CB85C;
+    }
+    
+    body {
+      padding-top: 56px;
+    }
+    
+    .hero-running {
+      background: linear-gradient(135deg, #2A5C82 0%, #3A86FF 100%);
+      color: white;
+      padding: 80px 0;
+      margin-bottom: 40px;
+    }
+    
+    .benefit-card {
+      transition: transform 0.3s;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 4px solid var(--secondary-color);
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .benefit-item {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .benefit-item i {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--secondary-color);
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .back-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    
+    .back-btn:hover {
+      background-color: #1a4561;
+      color: white;
+      transform: translateX(-5px);
+    }
+    
+    .plan-table {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .plan-table thead {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .plan-table tbody tr:nth-child(odd) {
+      background-color: #f8f9fa;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-running {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="fas fa-heartbeat"></i> Vida Saudável
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#exercicios">Exercícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#alimentacao">Nutrição</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#imc">Calculadora IMC</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#dicas">Dicas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção Hero Corrida -->
+  <section class="hero-running">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-3">Corrida Leve</h1>
+      <p class="lead">20 minutos diários para melhorar sua saúde cardiovascular</p>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <a href="../index.html#exercicios" class="back-btn mb-4">
+          <i class="fas fa-arrow-left me-2"></i> Voltar para Exercícios
+        </a>
+        
+        <h2 class="mb-4">Programa de Corrida para Iniciantes</h2>
+        <p class="lead">Esta rotina de 20 minutos foi desenvolvida especialmente para estudantes que querem começar a correr sem impactos excessivos.</p>
+        
+        <div class="row mt-5">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 benefit-card">
+              <div class="card-body">
+                <h3><i class="fas fa-walking me-2"></i>Aquecimento</h3>
+                <p><strong>Duração:</strong> 5 minutos</p>
+                <p>Caminhada rápida para preparar músculos e articulações. Mantenha postura ereta e braços flexionados em 90°.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 benefit-card">
+              <div class="card-body">
+                <h3><i class="fas fa-running me-2"></i>Corrida Leve</h3>
+                <p><strong>Duração:</strong> 10 minutos</p>
+                <p>Corra em ritmo confortável onde você consegue manter uma conversa. Foque na respiração ritmada (inspire pelo nariz, expire pela boca).</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 benefit-card">
+              <div class="card-body">
+                <h3><i class="fas fa-walking me-2"></i>Intervalo Caminhada</h3>
+                <p><strong>Duração:</strong> 2 minutos</p>
+                <p>Reduza o ritmo para caminhada rápida caso sinta necessidade. Hidrate-se se necessário.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 benefit-card">
+              <div class="card-body">
+                <h3><i class="fas fa-running me-2"></i>Finalização</h3>
+                <p><strong>Duração:</strong> 3 minutos</p>
+                <p>Corrida leve final seguida de caminhada para desacelerar gradualmente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-5">
+          <h3 class="mb-4">Técnica de Corrida Adequada</h3>
+          <div class="video-container mb-4">
+            <iframe src="https://www.youtube.com/embed/_kGESn8ArrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p>Este vídeo mostra a postura correta para corrida, evitando lesões e maximizando os benefícios.</p>
+        </div>
+        
+        <div class="mt-5">
+          <h3 class="mb-4">Plano de Progressão Semanal</h3>
+          <div class="table-responsive">
+            <table class="table plan-table">
+              <thead>
+                <tr>
+                  <th>Semana</th>
+                  <th>Caminhada</th>
+                  <th>Corrida</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>5 min</td>
+                  <td>1 min (5x)</td>
+                  <td>20 min</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>3 min</td>
+                  <td>2 min (5x)</td>
+                  <td>20 min</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2 min</td>
+                  <td>3 min (5x)</td>
+                  <td>20 min</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>1 min</td>
+                  <td>4 min (4x)</td>
+                  <td>20 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3">Após a 4ª semana, você estará pronto para correr 20 minutos contínuos!</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card shadow-sm p-4 mb-4">
+          <h3 class="mb-4">Benefícios da Corrida Leve</h3>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Melhora cardiovascular</h5>
+            <p class="text-muted">Fortalecimento do coração e melhora da circulação sanguínea.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Queima calórica eficiente</h5>
+            <p class="text-muted">Pode queimar entre 150-300 calorias em 20 minutos, dependendo do peso.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Melhora do humor</h5>
+            <p class="text-muted">Liberação de endorfinas que reduzem estresse e ansiedade.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <h5>Conveniência</h5>
+            <p class="text-muted">Pode ser feita em qualquer lugar, sem necessidade de equipamentos.</p>
+          </div>
+        </div>
+        
+        <div class="card shadow-sm p-4">
+          <h3 class="mb-4">Dicas Essenciais</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fas fa-shoe-prints text-primary me-2"></i>
+              Use tênis adequados para corrida
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-bottle-water text-primary me-2"></i>
+              Hidrate-se antes, durante (se necessário) e após
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-clock text-primary me-2"></i>
+              Corra em horários mais frescos (manhã ou fim de tarde)
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-arrows-alt-v text-primary me-2"></i>
+              Mantenha postura ereta e olhe para frente
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-heartbeat text-primary me-2"></i>
+              Respeite seus limites e aumente a intensidade gradualmente
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card shadow-sm p-4 mt-4">
+          <h3 class="mb-4">Roteiros no Campus</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fas fa-map-marked-alt text-success me-2"></i>
+              Volta completa ao estacionamento (1km)
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-map-marked-alt text-success me-2"></i>
+              Trilha entre os blocos A e D (800m)
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-map-marked-alt text-success me-2"></i>
+              Circuito da área de convivência (600m)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>© 2023 Vida Saudável - Cruzeiro do Sul. Todos os direitos reservados.</p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
